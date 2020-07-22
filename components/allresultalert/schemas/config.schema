@@ -1,0 +1,18 @@
+Object(中奖结果组件配置) {
+  getNowButton(立即领取按钮): Image,
+  uploadButton(确认提交按钮): Image,
+  goUseButton(去使用按钮): Image,
+  goChargeButton(去充值按钮): Image,
+  closeIcon(关闭按钮): Image,
+  alertJoyTitle(中奖了标题图): Image,
+  alertTipsTitle(提示标题图): Image,
+  alertMyPrizeTitle(我的奖品标题图): Image,
+  checkPrizeUrl(跳转到卡包查看奖品链接): String,
+  ensureButton(确定按钮图): Image,
+  toDrawingButton(去抽奖按钮): Image,
+  chargeLink(充话费链接): String,
+  alertBackground(弹窗背景图): Image,
+  alertTipsBackground(提示弹窗背景图): Image,
+  prizeIcon(默认的奖品图，占位用，透明，尺寸190*225): Image,
+  buttonBackground(奖品列表按钮背景图): Image
+}

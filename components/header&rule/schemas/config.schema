@@ -1,0 +1,9 @@
+Object(组件配置) {
+  text(内容): RichText,
+  closeImage(规则关闭图标): Image,
+  alertRuleBackground(规则页背景图): Image,
+  alertRuleTitle(活动规则标题图): Image,
+  autoSeed(埋点名): String,
+  rightImage(右侧图片): Image,
+ 
+}

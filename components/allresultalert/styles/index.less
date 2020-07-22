@@ -1,0 +1,311 @@
+.fd-allresultalert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 7.5rem;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  &-container {
+    display: none;
+    margin: 50vh auto;
+    width: 7.16rem;
+    height: 10.45rem;
+    border-radius: 0.3rem;
+    transform: translateY(-50%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 0.4rem;
+    &-title {
+      font-size: 0.3rem;
+      color: #ffffff;
+      text-align: center;
+      .title-Image {
+        margin: 2.8rem auto 0 auto;
+        width: 4.2rem;
+      }
+      label {
+        margin-top: 0.2rem;
+        display: block;
+        font-size: 0.3rem;
+        color: #ffffff;
+        text-align: center;
+      }
+      .close {
+        position: absolute;
+        top: 2.4rem;
+        right: 0.1rem;
+        width: 0.68rem;
+        height: 0.68rem;
+      }
+      span {
+        font-size: 0.24rem;
+      }
+    }
+    &-content {
+      padding: 0.5rem 0 0.3rem 0;
+      text-align: center;
+      .prize-item {
+        margin: 0 auto;
+        width: 4.8rem;
+        &-content {
+          margin: 0 auto;
+          .prize {
+            margin: 0 auto;
+            width: 2.25rem;
+            height: 2.25rem;
+          }
+          .prize-item-title {
+            margin: 0.3rem auto 0 auto;
+            font-size: 0.32rem;
+            line-height: 2;
+            color: #fd3e16;
+          }
+          .prize-item-desc {
+            margin: 0 auto;
+            font-size: 0.2rem;
+            line-height: 2;
+            color: #fd3e16;
+          }
+        }
+      }
+      .get-prize-button {
+        margin: 0.3rem auto 0.1rem auto;
+        width: 3.45rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.normal-prize {
+  display: none;
+  .fd-allresultalert-container-title {
+    font-size: 0.3rem;
+    span {
+      color: #8fa6c2;
+    }
+  }
+}
+.prize500 {
+  display: none;
+  .fd-allresultalert-container-title {
+    label {
+      margin: 0.9rem auto 0 auto;
+      color: #ff917a;
+      font-size: 0.3rem;
+      span {
+        font-size: 0.3rem;
+      }
+    }
+  }
+  .fd-allresultalert-container-content {
+    padding: 0rem 0 0.3rem 0;
+    text-align: center;
+  }
+  &-content {
+    &-input {
+      margin: 0.7rem auto 0 auto;
+      padding: 0 0.2rem;
+      width: 4.78rem;
+      height: 0.82rem;
+      // background: #361695;
+      border-radius: 0.1rem;
+      border: 0.01rem solid #fdc87a;
+      input {
+        margin: 0.21rem 0;
+        width: 100%;
+        height: 0.36rem;
+        line-height: 0.36rem;
+        font-size: 0.32rem;
+        color: #b3b4b9;
+        border: none;
+        outline: none;
+        text-align: left;
+        // background: #361695;
+        opacity: 0.9;
+      }
+    }
+    h5 {
+      padding: 0.35rem 0 0.25rem 0;
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.26rem;
+      font-weight: 600;
+    }
+  }
+  .get-500prize-button {
+    margin: 0.7rem auto 0.1rem auto;
+    width: 4.26rem;
+    // height: 0.85rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.P30-alert {
+  .prize500();
+  display: none;
+  .fd-allresultalert-container-content {
+    padding: 0rem 0 0.3rem 0;
+  }
+  .fd-allresultalert-container-title {
+    label {
+      margin: 0.45rem auto 0 auto;
+      color: #fc3f15;
+      font-size: 0.26rem;
+    }
+  }
+  &-content {
+    &-input {
+      margin-top: 0.35rem;
+    }
+    &-input:first-child {
+      margin-top: 0.15rem;
+    }
+  }
+  .get-P30prize-button {
+    margin: 0.2rem auto 0.1rem auto;
+    width: 4.25rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.no-chance {
+  .normal-prize();
+  display: none;
+  height: 8.27rem;
+  .fd-allresultalert-container-title {
+    line-height: 0.6rem;
+    padding: 0;
+    p {
+       margin: 0.5rem auto 0.3rem auto;
+       font-size: 0.32rem;
+       color: #fd3e16;
+    }
+  }
+  .fd-allresultalert-container-content {
+    padding: 0 0 0.6rem 0;
+    h5 {
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 0.24rem;
+      color: #fd3e16;
+    }
+    .known-button {
+      margin: 0rem auto 0 auto;
+      width: 4.25rem;
+      height: 1.4rem;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.no-prize {
+  .no-chance();
+  display: none;
+  .fd-allresultalert-container-content {
+    .known-button {
+      margin: 0rem auto 0 auto;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.goto-check {
+  .no-chance();
+   display: none;
+  .fd-allresultalert-container-content {
+    .goto-check-button {
+      margin: 0rem auto 0 auto;
+      width: 4.25rem;
+      height: 1.4rem;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+#not-start-or-ended {
+  display: none;
+  .fd-allresultalert-container-content {
+      padding: 0.1rem 0 0.5rem 0;
+  }
+}
+.my-prize {
+  .normal-prize();
+  display: none;
+  .fd-allresultalert-container-content {
+    padding: 0;
+    margin: 0.2rem 0 0 0;
+    height: 5.7rem;
+    overflow-y: scroll;
+    ul {
+      padding-top: 0.5rem;
+      li {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.4rem;
+        width: 100%;
+        .prize-icon {
+          margin-left: 0.75rem;
+          /* padding-right: 0.4rem; */
+          width: 1rem;
+          height: 1rem;
+          img {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+        .prize-info {
+          margin-left: 0.25rem;
+          padding: 0 0 0.25rem 0;
+          width: 3rem;
+          text-align: left;
+          &-title {
+            font-size: 0.32rem;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #fd3e16;
+            line-height: 1.5;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          &-desc {
+            font-size: 0.22rem;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #fd3e16;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+        }
+        .prize-ready-use {
+          margin: 0.2rem 0 0.36rem 0.15rem;
+          width: 1.3rem;
+          height: 0.6rem;
+          line-height: 0.56rem;
+          font-size: 0.28rem;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #ed0c0c;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+        .prize-used{
+          .prize-ready-use();
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+}

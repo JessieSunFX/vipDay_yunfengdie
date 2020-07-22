@@ -1,0 +1,59 @@
+{
+  "rootId": "20200801MemberDay",
+  "taskIdRecharge": "topUpTask01",
+  "taskIdShare": "topUpTask02",
+  "taskIdFollow": "topUpTask03",
+
+  "backgroundColor": "#39B6DA",
+  "backgroundImg": "https://gw.alipayobjects.com/os/q/cms/images/kcwx8sgv/b960e656-f2b4-4597-b890-f6a8ccf1dea5_w750_h780.png",
+  "subTitleBg": "https://gw.alipayobjects.com/os/q/cms/images/kcwx9gw8/142eebb3-d7bd-4c9d-95ef-a02e1d8992ad_w672_h163.png",
+  "prizeContent": "https://gw.alipayobjects.com/os/q/cms/images/kcvpli52/1b90ca39-9de2-4df0-9703-4e83312e4467_w672_h642.png",
+  "buttonFlow": "https://gw.alipayobjects.com/os/q/cms/images/kcvplwst/fb7a6e60-1e2a-4309-b429-a042100136e0_w197_h187.png",
+  "topOpenBtn": "https://gw.alipayobjects.com/os/q/cms/images/kcwxa4n4/a91943b3-6b64-4156-80f8-0a01b52a5b49_w426_h106.png",
+  "miniProgramIndex": "alipays://platformapi/startapp?appId=2018092561507369&page=pages/index/index&query=FromSource%3DVIP_ACTIVITY",
+  "showRightList": true,
+  "activityTime": "活动时间：每月28日——次月15日",
+ 
+  "shareCont": {
+    "title": "分享标题",
+    "content": "分享内容",
+    "imageUrl": "分享图片地址",
+    "url": "分享地址"
+  },
+  "bottomBannerList": [
+    {
+      "img": "https://gw.alipayobjects.com/os/q/cms/images/kcvpmerw/b3f56870-c74c-4b85-b358-a57842baaed1_w666_h228.png",
+      "link": "https://www.baidu.com/"
+    }
+  ],
+  "rightsList": [
+    {
+      "img": "https://gw.alipayobjects.com/os/q/cms/images/kcvpn2d3/3823a6b8-c613-4332-ad99-87bc63238227_w297_h412.png",
+      "link": "https://www.baidu.com/"
+    },
+    {
+      "img": "https://gw.alipayobjects.com/os/q/cms/images/kcvpn2d3/3823a6b8-c613-4332-ad99-87bc63238227_w297_h412.png",
+      "link": "https://www.baidu.com/"
+    },
+    {
+      "img": "https://gw.alipayobjects.com/os/q/cms/images/kcvpn2d3/3823a6b8-c613-4332-ad99-87bc63238227_w297_h412.png",
+      "link": "https://www.baidu.com/"
+    }
+  ],
+  "followTask": {
+    "link": "https://www.baidu.com/",
+    "img": "https://gw.alipayobjects.com/os/q/cms/images/kcwxbnof/58a95779-e8a7-4d36-8fdb-b3c3b8e1cbba_w672_h176.png",
+    "imgCompleted": "https://gw.alipayobjects.com/os/q/cms/images/kcwxbpyd/cb5f2be1-970d-462e-80dc-401203f142b6_w672_h176.png"
+  },
+
+   "drawAlert": {
+    "backgroundImg": "https://gw.alipayobjects.com/os/q/cms/images/kcwxcx9g/ec8fbb3f-67c7-4871-8245-b3a1149e5547_w652_h539.png",
+    "btnImg": "https://gw.alipayobjects.com/os/q/cms/images/kcwxd93e/4a955740-6178-431c-8f8a-e5fdafb6a179_w460_h88.png"
+  },
+
+  "rightsAlert": {
+    "backgroundImg": "https://gw.alipayobjects.com/os/q/cms/images/kcwxdph6/1af7aa65-ed69-4912-a7b2-e88a5d659708_w652_h331.png",
+    "btnImg": "https://gw.alipayobjects.com/os/q/cms/images/kcwxe0qs/baed768c-4ce8-42a0-ada0-b0490b8091ea_w460_h88.png"
+  }
+
+}

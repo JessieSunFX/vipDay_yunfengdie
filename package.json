@@ -1,0 +1,21 @@
+{
+  "name": "vipDayActivity2020",
+  "version": "0.0.25",
+  "title": "会员日活动",
+  "author": "Jessie",
+  "dependencies": {
+    "swiper": "^5.3.8"
+  },
+  "entry": {
+    "pages/home/scripts/index": "./pages/home/scripts/index.js",
+    "pages/home/styles/index": "./pages/home/styles/index.less",
+    "components/header&rule/scripts/index": "./components/header&rule/scripts/index.js",
+    "components/header&rule/styles/index": "./components/header&rule/styles/index.less",
+    "components/taskArea/scripts/index": "./components/taskArea/scripts/index.js",
+    "components/taskArea/styles/index": "./components/taskArea/styles/index.less",
+    "components/allresultalert/scripts/index": "./components/allresultalert/scripts/index.js",
+    "components/allresultalert/styles/index": "./components/allresultalert/styles/index.less",
+    "components/taskArea/styles/swiper.min": "./components/taskArea/styles/swiper.min.css"
+  },
+  "license": "ISC"
+}

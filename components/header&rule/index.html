@@ -1,0 +1,24 @@
+{% require "styles/index.css" %}
+
+{% use "schemas/config" as config %}
+  <!-- <div class="rule-control">规则</div> -->
+  <div class="header" style="display: none;">
+    <div class="header-part">
+    </div>
+  </div>
+  <div class="fd-rule" style="display: none;">
+    <div class="fd-rule-content" style="background-image: url({{config.alertRuleBackground}});">
+      <div class="fd-rule-content-title">
+        <img class="title-Image" src="{{config.alertRuleTitle}}"/>
+        <img class="close-rule" src="{{config.closeImage}}" />
+      </div>
+      <div class="fd-rule-content-text">
+        {{ config.text | safe }}
+      </div>
+    </div>
+  </div>
+  <!-- <img class="header-img" src="{{config.headerMainImg}}" /> -->
+
+{% enduse %}
+
+{% require "scripts/index.js" %}

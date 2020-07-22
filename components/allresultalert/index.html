@@ -1,0 +1,168 @@
+{% require "styles/index.css" %}
+
+{% use "schemas/config" as config %}
+  <div class="fd-allresultalert">
+    <!-- 普通已获得的奖品 -->
+    <div id="normal-prize" class="fd-allresultalert-container normal-prize" style="background-image: url({{config.alertBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertJoyTitle}}"/>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="prize-item-content">
+          <img class="prize" src="{{config.prizeIcon}}" />
+          <div class="prize-item-title">奖品标题最多是个字符</div>
+          <div class="prize-item-desc">我是奖品描述我是奖品最多可以有二十二个字符</div>
+        </div>
+        <!-- <div class="get-prize-button" id="show-prize500"> -->
+        <div class="get-prize-button" >
+          <img src="{{config.goUseButton}}" />
+          <img style="display: none;" src="{{config.getNowButton}}" />
+        </div>
+      </div>
+    </div>
+    <!-- 话费券奖品 -->
+    <div class="fd-allresultalert-container prize500" style="background-image: url({{config.alertBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertTipsTitle}}"/>
+        <label>请输入<span>1000元</span>话费领取的手机号码</label>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="prize500-content">
+          <!-- <div class="title">
+            <p>请填写充值号码</p>
+            <p>我们于<strong>3个工作日</strong>内将话费充值到该号码</p>
+          </div> -->
+          <div class="prize500-content-input">
+            <input type="number" class="getPrizeTel" maxlength="11" placeholder="请输入手机号码" />
+          </div>
+        </div>
+        <div class="get-500prize-button">
+          <img src="{{config.ensureButton}}" />
+        </div>
+      </div>
+    </div>
+    <!-- P30Pro奖品 -->
+    <div class="fd-allresultalert-container P30-alert" style=" background-image: url({{config.alertBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertTipsTitle}}"/>
+        <label>请填写您的收货地址和联系方式</label>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="P30-alert-content">
+          <!-- <div class="title">
+            <p>请填写您的收货联系方式</p>
+            <p>我们将于<strong>3个工作日</strong>内核实后发货</p>
+          </div> -->
+          <div class="P30-alert-content-input">
+            <input 
+              class="name getBigPrizeName" 
+              type="text"
+              maxlength="15" 
+              id="getBigPrizeName"
+              oninput="if(value.length > 15)value = value.slice(0, 15)" 
+              placeholder="请输入收件人姓名" 
+            />
+          </div>
+          <div class="P30-alert-content-input">
+            <input 
+              class="phone getBigPrizeTel" 
+              type="number" 
+              pattern="[0-9]*"
+              maxlength="11" 
+              id="getBigPrizeTel"
+              oninput="if(value.length > 11)value = value.slice(0, 11)" 
+              placeholder="请输入手机号码" 
+            />
+          </div>
+          <div class="P30-alert-content-input">
+            <input 
+              class="address getBigPrizeAddr" 
+              maxlength="20"
+              type="text"
+              id="getBigPrizeAddr"
+              value=""
+              placeholder="请输入收货地址" 
+            />
+          </div>
+        </div>
+        <div class="get-P30prize-button">
+          <img src="{{config.uploadButton}}" />
+        </div>
+      </div>
+    </div>
+    <!-- 我的奖品 -->
+    <div id="my-prize" class="fd-allresultalert-container my-prize" style="background-image: url({{config.alertBackground}});" >
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertMyPrizeTitle}}"/>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <ul data-buttonbg="{{config.buttonBackground}}">
+          <li class="prize-item">
+            <div class="prize-icon">
+              <img src="https://gw.alipayobjects.com/os/q/cms/images/k4aywpxx/5d9720da-9b51-4fa9-9094-1fde855f10a2_w67_h67.png" />
+            </div>
+            <div class="prize-info">
+              <div class="prize-info-title">这事奖品名字</div>
+              <div class="prize-info-desc">这事奖品描述这事奖品描述这事奖品奖品奖品描</div>
+            </div>
+            <div id="${prizeType}" data-aacname="${couponName}" data-audlid="${item.audlId}" class="prize-ready-use" style="background-image: url({{config.buttonBackground}})" data-link="${item.aacVeriflyUrl}">去使用</div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- 未完成任务，提示去充话费 -->
+    <div id="no-chance" class="fd-allresultalert-container no-chance"  style=" background-image: url({{config.alertTipsBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertTipsTitle}}"/>
+        <p>您还没有充值哦<br>充值一笔话费获得抽奖机会！</p>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <!-- <h5>（话费宝、自动充除外）</h5> -->
+        <div class="known-button get-to-charge" data-chargelink="{{config.chargeLink}}" style="background-image: url({{config.goChargeButton}});"></div>
+      </div>
+    </div>
+    <!-- 无奖品 -->
+    <div id="no-prize" class="fd-allresultalert-container no-prize"  style="background-image: url({{config.alertTipsBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertMyPrizeTitle}}"/>
+        <p>很遗憾，您与大奖擦肩而过~<br>
+        感谢您的参与！</p>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="known-button" style="background-image: url({{config.toDrawingButton}});"></div>
+      </div>
+    </div>
+    <!-- 已参与过抽奖，查看奖品 -->
+    <div id="goto-check" class="fd-allresultalert-container goto-check"  style="background-image: url({{config.alertTipsBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertTipsTitle}}"/>
+        <p>您已参与过活动<br>
+        可前往“我的奖品”查看中奖信息</p>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="goto-check-button check-my-prize" style="background-image: url({{config.ensureButton}});"></div>
+      </div>
+    </div>
+    <!-- 活动尚未开始/活动已结束/其他活动信息 -->
+    <div id="not-start-or-ended" class="fd-allresultalert-container no-prize"  style="background-image: url({{config.alertTipsBackground}});">
+      <div class="fd-allresultalert-container-title" >
+        <img class="title-Image" src="{{config.alertTipsTitle}}"/>
+        <p>活动尚未开始</p>
+        <img class="close" src="{{config.closeIcon}}" />
+      </div>
+      <div class="fd-allresultalert-container-content">
+        <div class="known-button" style="background-image: url({{config.ensureButton}});"></div>
+      </div>
+    </div>
+  </div>
+{% enduse %}
+
+{% require "scripts/index.js" %}

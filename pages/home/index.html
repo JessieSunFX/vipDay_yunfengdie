@@ -1,0 +1,24 @@
+{% extends "common/layouts/default.html" %}
+
+{% block body %}
+{% require "pages/home/styles/index.css" %}
+
+{% use "pages/home/schemas/config" as config %}
+
+<!-- <div class="content">
+  <p>Hello, {{ config.content }}</p>
+</div> -->
+{% enduse %}
+
+{% components %}
+    {% require 'components/header&rule' %}
+    {% require 'components/taskArea' %}
+    {% require 'components/allresultalert' %}
+{% endcomponents %}
+<!-- <div class="page-footer">
+    <div class="line"></div>
+    <text>月充月有礼&nbsp;&nbsp;月月有惊喜</text>
+    <div class="line"></div>
+</div> -->
+{% require "pages/home/scripts/index.js" %}
+{% endblock %}

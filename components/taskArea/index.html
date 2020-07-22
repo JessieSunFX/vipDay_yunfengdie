@@ -1,0 +1,148 @@
+{% require "styles/swiper.min.css" %}
+{% require "styles/index.css" %}
+
+{% use "schemas/config" as config %}
+ 
+  <style>
+     body {
+      background-color: {{config.backgroundColor}} !important;
+      background-image: url({{config.backgroundImg}}) !important;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  
+   
+    .bg_container .info span{
+     
+    }
+  </style>
+  <div class="user-num-info">
+    <label>已有<span data-num="0">0</span>位用户参与抽奖</label>
+  </div>
+
+  <div class="user-role jsCheckRule" data-auto-seed="checkRule">活动规则</div>
+
+  <div class="vip-guidance">
+    <div class="vip-no" style="background-image: url({{config.topOpenBtn}});" data-auto-seed="open-vip-top" data-url="{{config.miniProgramIndex}}"></div>
+    <div class="vip-yes" style="display:none;">
+      您已是双V尊享会员
+    </div>
+  </div>
+  <div class="fd-taskArea">
+    <div data-rootId="{{config.rootId}}" data-taskIdRecharge="{{config.taskIdRecharge}}" data-taskIdShare="{{config.taskIdShare}}" data-taskIdFollow="{{config.taskIdFollow}}" id="getdata" style="display:none;"></div>
+    
+    <div id="getShare"  data-shareTitle="{{config.shareCont.title}}" data-shareContent="{{config.shareCont.content}}" data-shareImageUrl="{{config.shareCont.imageUrl}}"  data-shareUrl="{{config.shareCont.url}}" style="display:none;"></div>
+    <div class="check-rule jsCheckShare">
+      <p>分享</p>  
+      <!-- <img src="{{config.ruleImage}}" > -->
+    </div>
+    <div class="check-prize check-my-prize">
+      <p>我的奖品</p>
+      <!-- <img src="{{config.myPrize}}" > -->
+    </div>
+ 
+  </div>
+  
+  <div class="lottery_container">
+    <!-- <div class="button-and-info">
+      <div class="button">
+        <div data-auto-seed="goCharge" class="button-item get-to-charge" data-chargelink="{{config.chargeLink}}" style="background-Image: url({{config.buttonCharge}});"></div>
+        <div data-auto-seed="getPrize" class="button-item get-my-prize" style="background-Image: url({{config.buttonFlow}});"></div>
+      </div>
+      <div class="info">
+        <label>每位用户充值<span>1</span>次可抽奖<span>2</span>次</label>
+        <label>分享给好友<span>额外有且仅有1次</span>抽奖机会</label>
+      </div>
+      
+    </div> -->
+    <div class="lottery-info" style="background-image: url({{config.subTitleBg}});">
+      <p>·尊享会员可抽奖<span>2次</span>·</p>
+      <p>分享给好友或关注移动特权生活号<span>额外有1次</span>抽奖机会</p>
+    </div>
+    <div class="lottery-main" style="background-image:url({{config.prizeContent}})">
+      <div class="lottery-btn get-my-prize">
+        <img src="{{config.buttonFlow}}" alt="" data-auto-seed="lottery-btn">
+      </div>
+    </div>
+    <!-- <div class="prize-area">
+      <div class="prize-content prize-content-animation">
+        <img src="{{config.prizeContent}}" />
+      </div>
+    </div> -->
+  
+    </div>
+  </div>
+
+  <div class="follow-lifeno">
+    <img class="follow-task" src="{{config.followTask.img}}" data-auto-seed="follow-task" data-link="{{config.followTask.link}}">
+    <img class="follow-task-completed" src="{{config.followTask.imgCompleted}}" style="display:none;">
+  </div>
+
+  {% if config.showRightList %}
+  <div class="vip-rights">
+    <div class="vip-title" style="background-image: url({{config.subTitleBg}});">
+      <p>· 尊享权益大放送 ·</p>
+    </div>
+    <div class="rights-list">
+      {% for item in config.rightsList %}
+        <li>
+          <img src="{{item.img}}" data-link="{{item.link}}">
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="swiper-banner">
+    {% if config.bottomBannerList.length>1 %}
+      <div class="swiper-container swiper-container-banner">
+          <div class="swiper-wrapper">
+              {% for item in config.bottomBannerList %}
+                  <div class="swiper-slide task_swiper_item"><img src="{{item.img}}" class="gotoBanner" data-link="{{item.link}}" /></div>
+              {% endfor %}
+          </div>
+          <!-- 如果需要分页器 -->
+          <!-- <div class="swiper-pagination swiper-pagination-banner"></div> -->
+      </div>
+    {% else %}   
+      <img src="{{config.bottomBannerList[0].img}}" class="gotoBanner" data-link="{{config.bottomBannerList[0].link}}" />
+    {% endif %}
+  </div>
+  
+
+  <div class="activity-time">
+    <p>{{config.activityTime}}</p>
+    <!-- <p>同一用户仅限参与一次</p> -->
+  </div>
+
+  <div class="bot_fixedbg">
+    <div class="bot_fixed" id="bot_fixed">
+      <ul>
+        <li class="bot_fixed_tel">
+          <a href="tel:{{config.serviceTel}}" data-auto-seed="service-tel">{{config.serviceTel}}<span>（{{config.serviceTime}}）</span></a>
+        </li>
+        <li class="bot_fixed_close jscloseserver" data-auto-seed="service-close">关闭</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="vip-alert">
+     <!-- 抽奖时未开通尊享会员 -->
+    <div id="lottery-alert" style=" background-image: url({{config.drawAlert.backgroundImg}});">
+      <div class="vip-alert-close"></div>
+      <div class="btn" data-url="{{config.miniProgramIndex}}">
+        <img src="{{config.drawAlert.btnImg}}" data-auto-seed="open-vip-lottery">
+      </div>
+    </div>
+    <!-- 点击权益列表时未开通尊享会员 -->
+    <div id="list-alert" style=" background-image: url({{config.rightsAlert.backgroundImg}});">
+      <div class="vip-alert-close"></div>
+      <div class="btn" data-url="{{config.miniProgramIndex}}">
+         <img src="{{config.rightsAlert.btnImg}}" data-auto-seed="open-vip-rights">
+      </div>
+    </div>
+  </div>
+
+{% enduse %}
+
+{% require "scripts/index.js" %}

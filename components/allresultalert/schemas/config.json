@@ -1,0 +1,18 @@
+{
+  "getNowButton": "https://gw.alipayobjects.com/os/q/cms/images/k5ezq3sv/ce2f3d0f-fd79-4592-a485-61488e98980c_w426_h140.png",
+  "uploadButton": "https://gw.alipayobjects.com/os/q/cms/images/k5ezsunm/5a162c01-f448-4db3-a776-9106a81be52c_w426_h139.png",
+  "goUseButton": "https://gw.alipayobjects.com/os/q/cms/images/k5ezp6vb/46d53361-3fda-4121-9603-c6ed37e2b7d1_w426_h140.png",
+  "goChargeButton": "https://gw.alipayobjects.com/os/q/cms/images/k5f0hadz/f366df85-19ab-470c-a744-60cb0c2b23cb_w426_h139.png",
+  "closeIcon": "https://gw.alipayobjects.com/os/q/cms/images/k5ezte66/35413b11-0617-4d04-ae6c-28b9be0e5917_w68_h68.png",
+  "alertJoyTitle": "https://gw.alipayobjects.com/os/q/cms/images/k5ezg0rf/5c3d697b-5dac-4ef4-a69a-e739b34530bb_w420_h110.png",
+  "alertTipsTitle": "https://gw.alipayobjects.com/os/q/cms/images/k5ezhp98/da63aac6-3c47-42e4-99a3-df5feecee9d3_w420_h110.png",
+  "alertMyPrizeTitle": "https://gw.alipayobjects.com/os/q/cms/images/k5ezi9vp/744c10e9-3386-4415-a09b-b259cc9db32b_w420_h110.png",
+  "checkPrizeUrl": "alipays://platformapi/startapp?appId=20000021&a=lb&b=c",
+  "ensureButton": "https://gw.alipayobjects.com/os/q/cms/images/k5eznzug/1482e5ff-4885-4453-a858-87f51775d386_w426_h139.png",
+  "toDrawingButton": "https://gw.alipayobjects.com/os/q/cms/images/k5ezmq7c/f5c0b008-87d5-423f-b361-5b0c620ddd37_w426_h139.png",
+  "chargeLink": "https://render.alipay.com/p/f/fd-iwrhmfm2/index.html?sourceId=shop_866543608_cost1",
+  "alertBackground": "https://gw.alipayobjects.com/os/q/cms/images/k5ez8vdv/a4d60544-9225-4c39-bee9-1a1336ce22f0_w716_h1042.png",
+  "alertTipsBackground": "https://gw.alipayobjects.com/os/q/cms/images/k5f0add3/40bf7498-8afd-4b78-82a1-1b14209a16a3_w716_h827.png",
+  "prizeIcon": "https://gw.alipayobjects.com/os/q/cms/images/k4b1wz2h/868cb15e-ffd7-451a-bfa8-1ae47576acb0_w190_h225.png",
+  "buttonBackground": "https://gw.alipayobjects.com/os/q/cms/images/k4dsxf9f/fa4d5db3-7868-406a-a2e5-08002a3d3a12_w128_h61.png"
+}

@@ -1,0 +1,49 @@
+Object(组件配置) {
+  rootId(活动Id（确定了不要修改和后端关联）):String,
+  taskIdRecharge(充值任务Id（确定了不要修改和后端关联）):String,
+  taskIdShare(分享任务Id（确定了不要修改和后端关联）):String,
+  taskIdFollow(关注生活号Id（确定了不要修改和后端关联）):String,
+  backgroundColor(背景颜色): String,
+  backgroundImg(页面背景图片): Image,
+  subTitleBg(抽奖 && 权益标题背景): Image,
+  prizeContent(活动奖品): Image,
+  buttonFlow(抽奖按钮): Image,
+  topOpenBtn(“开通尊享会员抽大奖”按钮): Image,
+  miniProgramIndex(小程序首页地址（开通尊享会员引导）): String,
+  showRightList(是否显示权益列表): Boolean,
+  activityTime(活动时间): String,
+  
+  shareCont(分享组件): Object {
+    title(分享标题): String,
+    content(分享副标题): String,
+    imageUrl(分享图片地址): Image,
+    url(分享地址): String
+  },
+
+  bottomBannerList(底部banner轮播): Array {
+    img(banner图片地址): Image,
+    link(banner跳转链接): String
+  },
+
+  rightsList(权益列表): Array {
+    img(权益图片地址): Image,
+    link(权益跳转链接): String
+  },
+
+  followTask(关注生活号任务): Object {
+    link(关注生活号跳转链接): String,
+    img(去完成-图片): Image
+    imgCompleted(已完成-图片): Image
+  },
+  
+  drawAlert(抽奖弹框-开通尊享): Object {
+    backgroundImg(弹框背景): Image,
+    btnImg(“开通双V尊享会员”按钮): Image
+  },
+
+  rightsAlert(权益弹框-开通尊享): Object {
+    backgroundImg(弹框背景): Image,
+    btnImg(“立即开通”按钮): Image
+  }
+
+}
