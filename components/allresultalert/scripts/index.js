@@ -58,7 +58,8 @@ window['_component_allresultalert'] = function(id) {
   $('.fd-allresultalert').on('click', '#show-prize500', function () {
     var audlId = $(this).data('audlid');
     let couponName = $(this).data('aacname');
-    let alertTitle = `请输入<span>${couponName}元</span>话费领取的手机号码`;
+    // let alertTitle = `请输入<span>${couponName}元</span>话费领取的手机号码`;
+    let alertTitle = `请输入领取话费奖的手机号`;
     $('.prize500 .fd-allresultalert-container-title label').empty();
     $('.prize500 .fd-allresultalert-container-title label').html(alertTitle);
     $('.fd-allresultalert, .fd-allresultalert-container').hide();
