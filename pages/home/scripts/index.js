@@ -98,7 +98,7 @@ functionMode.envPath()
                res.data.forEach(item => {
                  for(var key in item) {
                    if(key === taskId){
-                     if(item[key] === 'true') {//已完成关注生活号任务
+                     if(item[key] == true) {//已完成关注生活号任务
                         $('.follow-task-completed').show().prev().hide();
                      }
                    }
