@@ -20,7 +20,7 @@
     <label>已有<span data-num="0">0</span>位用户参与抽奖</label>
   </div>
 
-  <div class="user-role jsCheckRule" data-auto-seed="checkRule">活动规则</div>
+  <div class="user-role jsCheckRule">活动规则</div>
 
   <div class="vip-guidance">
     <div class="vip-no" style="background-image: url({{config.topOpenBtn}});" data-auto-seed="open-vip-top" data-url="{{config.miniProgramIndex}}"></div>
@@ -60,8 +60,7 @@
       <p>分享给好友或关注移动特权生活号<span>额外有1次</span>抽奖机会</p>
     </div>
     <div class="lottery-main" style="background-image:url({{config.prizeContent}})">
-      <div class="lottery-btn get-my-prize">
-        <img src="{{config.buttonFlow}}" alt="" data-auto-seed="lottery-btn">
+      <div class="lottery-btn get-my-prize" data-auto-seed="lottery-btn" style="background-image: url({{config.buttonFlow}});">
       </div>
     </div>
     <!-- <div class="prize-area">
@@ -74,7 +73,7 @@
   </div>
 
   <div class="follow-lifeno">
-    <img class="follow-task" src="{{config.followTask.img}}" data-auto-seed="follow-task" data-link="{{config.followTask.link}}">
+    <div class="follow-task"  data-auto-seed="follow-task" data-link="{{config.followTask.link}}" style="background-image: url({{config.followTask.img}});"></div>
     <img class="follow-task-completed" src="{{config.followTask.imgCompleted}}" style="display:none;">
   </div>
 
@@ -130,15 +129,13 @@
      <!-- 抽奖时未开通尊享会员 -->
     <div id="lottery-alert" style=" background-image: url({{config.drawAlert.backgroundImg}});">
       <div class="vip-alert-close"></div>
-      <div class="btn" data-url="{{config.miniProgramIndex}}">
-        <img src="{{config.drawAlert.btnImg}}" data-auto-seed="open-vip-lottery">
+      <div class="btn" data-url="{{config.miniProgramIndex}}" data-auto-seed="open-vip-lottery" style="background-image: url({{config.drawAlert.btnImg}});">
       </div>
     </div>
     <!-- 点击权益列表时未开通尊享会员 -->
     <div id="list-alert" style=" background-image: url({{config.rightsAlert.backgroundImg}});">
       <div class="vip-alert-close"></div>
-      <div class="btn" data-url="{{config.miniProgramIndex}}">
-         <img src="{{config.rightsAlert.btnImg}}" data-auto-seed="open-vip-rights">
+      <div class="btn" data-url="{{config.miniProgramIndex}}" data-auto-seed="open-vip-rights" style="background-image: url({{config.rightsAlert.btnImg}});">
       </div>
     </div>
   </div>
