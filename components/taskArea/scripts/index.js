@@ -194,7 +194,7 @@ window['_component_taskArea'] = function (id) {
       el: '.swiper-pagination-banner',
     },
     autoplay: {
-      delay: 5000,
+      delay: 2000,
     },
     spaceBetween: 10,
   })

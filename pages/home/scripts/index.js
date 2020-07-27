@@ -282,7 +282,7 @@ functionMode.envPath()
     $('body').on('click', '.check-my-prize', function () {
       console.log('我的奖品！！！');
       var $This = $(this);
-      let url = '/mobileButterfly/activity/getPrizes';
+      let url = '/user/getPrizes';
       //window.scrollTo(0, $('.prize-area').offset().top - $('.button-and-info').height()/2)
       //$('body').css('position','fixed');
       //$('.fd-allresultalert, #my-prize').show();
@@ -487,14 +487,9 @@ functionMode.envPath()
           name = $(this).parent().find('input').eq(0).val(),
           address = $(this).parent().find('input').eq(2).val();
 
-
       var nameLength = name.replace(/[^\x00-\xff]/g, 'xx').length,
           addressLength = address.replace(/[^\x00-\xff]/g, 'xx').length;
       var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
-
-
-
-
 
       if (nameLength < 4 || nameLength > 30) {
         AlipayJSBridge.call('toast', {content: '请输入正确的姓名',});
@@ -744,7 +739,7 @@ functionMode.envPath()
               AlipayJSBridge.call('hideLoading');
               switch(res.code) {
                 case '10000':
-                  let number = res.data.count;
+                  let number = res.data;
                   var target = $('.user-num-info label span');
                   var baseNum = target.data('num');
                   if (baseNum < number) {
@@ -760,9 +755,9 @@ functionMode.envPath()
                   // functionMode.dealCodeStatus(res.code);
                   break;
               }
-            //   setTimeout(function () {
-            //     loadUVStatus();
-            //   },4000)
+              setTimeout(function () {
+                getPVNumber();
+              },4000)
             },
             error: function (xhr, type) {
               AlipayJSBridge.call('hideLoading');
