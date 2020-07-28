@@ -11,7 +11,7 @@ var authCode = "",
 functionMode.envPath()
   .then(env_path => {
 
-    document.addEventListener('pageResume', function(e) {
+    document.addEventListener('resume', function(e) {
       $('.vip-alert').hide();
       AlipayJSBridge.call('showLoading', {
         text: '加载中',
@@ -166,7 +166,7 @@ functionMode.envPath()
              
               case '20009': //抽奖未中奖
                 // $('#no-prize, .fd-allresultalert').show();
-                $('#not-start-or-ended p').html('很遗憾，您与大奖擦肩而过<br>感谢您的参与！');
+                $('#not-start-or-ended p').html('分享给好友或邀请好友开通<br>额外有1次抽奖机会');
                 $('#not-start-or-ended, .fd-allresultalert').show();
                 break;
 
@@ -221,7 +221,7 @@ functionMode.envPath()
                 break;
 
               default:
-                $('#not-start-or-ended p').html('很遗憾您与大奖擦肩而过<br>换个姿势，再来一次！');
+                $('#not-start-or-ended p').html('分享给好友或邀请好友开通<br>额外有1次抽奖机会');
                 $('#not-start-or-ended, .fd-allresultalert').show();
                 break;
             }
