@@ -179,12 +179,15 @@ functionMode.envPath()
                 functionMode.looseBody();
                 break;
               case '30003': // 快去做任务获取抽奖机会
-                $('#no-chance p').html('快去做任务获取抽奖机会');
-                $('#no-chance, .fd-allresultalert').show();
+                // $('#no-chance p').html('快去做任务获取抽奖机会');
+                // $('#no-chance, .fd-allresultalert').show();
+
+                $('#not-start-or-ended p').html('分享给好友或邀请好友开通<br>额外有1次抽奖机会');
+                $('#not-start-or-ended, .fd-allresultalert').show();
               
                 break;
              
-              case '30004': // 抽奖次数用尽
+              case '30017': // 抽奖次数用尽
                 AlipayJSBridge.call('toast', {
                   content: '抽奖次数已耗尽！',
                   duration: 2000
@@ -213,7 +216,7 @@ functionMode.envPath()
               
               case '40004':
                 AlipayJSBridge.call('toast', {
-                  content: '系统异常，请稍后再试',
+                  content: '系统异常，请重新尝试',
                   duration: 2000
                 });
                 // $('body').css('position','static');
@@ -221,15 +224,19 @@ functionMode.envPath()
                 break;
 
               default:
-                $('#not-start-or-ended p').html('分享给好友或邀请好友开通<br>额外有1次抽奖机会');
-                $('#not-start-or-ended, .fd-allresultalert').show();
+                AlipayJSBridge.call('toast', {
+                  content: '系统异常，请重新尝试',
+                  duration: 2000
+                });
+                // $('body').css('position','static');
+                functionMode.looseBody();
                 break;
             }
           },
           error: function (xhr, type) {
             AlipayJSBridge.call('hideLoading');
             AlipayJSBridge.call('toast', {
-              content: '网络错误，请稍后重试',
+              content: '系统异常，请重新尝试',
               type: 'fail',
               duration: 2000
             });
