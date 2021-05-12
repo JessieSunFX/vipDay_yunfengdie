@@ -4,7 +4,7 @@
   "title": "会员日活动",
   "author": "Jessie",
   "dependencies": {
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   },
   "entry": {
     "pages/home/scripts/index": "./pages/home/scripts/index.js",
